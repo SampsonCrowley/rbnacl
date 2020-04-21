@@ -107,7 +107,7 @@ module RbNaCl
       #                 (argon2i for libsodium < 1.0.15, and argon2id for
       #                 libsodium >= 1.0.15).
       #
-      # @return [String] scrypt digest of the string as raw bytes
+      # @return [String] argon2 digest of the string as raw bytes
       def digest(password, salt, algo = nil)
         raise ArgumentError, "digest_size is required" unless @digest_size
 
